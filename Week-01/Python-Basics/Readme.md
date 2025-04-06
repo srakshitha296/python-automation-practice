@@ -1,4 +1,4 @@
-### ✅ Day 1 (April 6)
+### ✅ Day 1 
 - Practiced Python (loops, if-else, functions)
 - ✔️ Scripts:
   - even_numbers.py

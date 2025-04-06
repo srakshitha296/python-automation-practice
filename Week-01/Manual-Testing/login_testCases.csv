@@ -1,0 +1,105 @@
+Step,Action,Expected Result,Status,Actual Result (If needed),Priority,Status
+Prereq.,-The user has a valid phone number or email to sign up with,,,,,
+1,Validate sign up with valid phone number,,,,High,
+1.1,Navigate to sign up page,"-User registration is successful
+-User is redirected to Newsfeed Page
+-An OTP is sent to the user",Ready to Test,,,
+1.2,Provide a valid first name,,,,,
+1.3,Provide a valid surname,,,,,
+1.4,Provide a valid phone number,,,,,
+1.5,Provide a valid password,,,,,
+1.6,Provide a valid date of birth,,,,,
+1.7,Provide a valid gender,,,,,
+1.8,"Click on ""Sign up""",,,,,
+2,Validate sign up with valid email address,,,,High,
+2.1,Navigate to sign up page,"-User registration is successful
+-User is redirected to Newsfeed Page
+-An email verification is sent to the user",Ready to Test,,,
+2.2,Provide a valid first name,,,,,
+2.3,Provide a valid surname,,,,,
+2.4,Provide a valid email number,,,,,
+2.5,Provide a valid password,,,,,
+2.6,Provide a valid date of birth,,,,,
+2.7,Provide a valid gender,,,,,
+2.8,"Click on ""Sign up""",,,,,
+3,Validate sign up with Arabic First & Surname,,,,Medium,
+3.1,Navigate to sign up page,"-User registration is successful
+-User is redirected to Newsfeed Page
+-Username appears normally without any UI issues
+-An email verification is sent to the user",Ready to Test,,,
+3.2,"Provide a valid Arabic first name ""طارق""",,,,,
+3.3,"Provide a valid Arabic surname ""رشدي""",,,,,
+3.4,Provide a valid email number,,,,,
+3.5,Provide a valid password,,,,,
+3.6,Provide a valid date of birth,,,,,
+3.7,Provide a valid gender,,,,,
+3.8,"Click on ""Sign up""",,,,,
+4,Validate sign up with Russian First & Surname,,,,Medium,
+3.1,Navigate to sign up page,"-User registration is successful
+-User is redirected to Newsfeed Page
+-Username appears normally without any UI issues
+-An email verification is sent to the user",Ready to Test,,,
+3.2,"Provide a valid Russian first name ""Тарека""",,,,,
+3.3,"Provide a valid Russian surname "" Рошди""",,,,,
+3.4,Provide a valid email number,,,,,
+3.5,Provide a valid password,,,,,
+3.6,Provide a valid date of birth,,,,,
+3.7,Provide a valid gender,,,,,
+3.8,"Click on ""Sign up""",,,,,
+5,"Validate providing a short valid first or surname ""E.g: ""Yu-o-jc""",,,,Low,
+5.1,Navigate to sign up page,-Firstname and lastname are accepted,Ready to Test,,,
+5.2,"Provide a valid first name ""Yu""",,,,,
+5.3,"Provide a valid surname ""O""",,,,,
+5.4,Provide valid data in all other fields,,,,,
+5.5,"Click on ""Sign up""",,,,,
+6,Validate providing a mobile number with country,,,,High,
+6.1,Navigate to sign up page,"-User registration is successful
+-User is redirected to Newsfeed Page
+-An OTP is sent to the user",Ready to Test,,,
+6.2,Provide a valid phone number with country code,,,,,
+6.3,Fill all other fields with valid data,,,,,
+6.4,"Click on ""Sign up""",,,,,
+7,Validate providing a mobile number without country,,,,High,
+7.1,Navigate to sign up page,"-User registration is successful
+-User is redirected to Newsfeed Page
+-An OTP is sent to the user",Ready to Test,,,
+7.2,Provide a valid phone number without country code,,,,,
+7.3,Fill all other fields with valid data,,,,,
+7.4,"Click on ""Sign up""",,,,,
+8,validate providing phone number in Arabic digits,,,,Low,
+8.1,Navigate to sign up page,"-User registration is successful
+-User is redirected to Newsfeed Page
+-An OTP is sent to the user",Ready to Test,,,
+8.2,"Provide a valid phone number in Arabic digits ""١٤٣٢٤٢٣""",,,,,
+8.3,Fill all other fields with valid data,,,,,
+8.4,"Click on ""Sign up""",,,,,
+9,Validate sign up with valid age in the range of 13 and 18 years Old,,,,High,
+9.1,Navigate to sign up page,"-User registration is successful
+-User is redirected to Newsfeed Page
+",Ready to Test,,,
+9.2,Enter valid age in the range of 13 and 18,,,,,
+9.3,Fill all other fields with valid data,,,,,
+9.4,"Click on ""Sign up""",,,,,
+10,Validate sign up with valid age in the range of 18 and 120 years Old,,,,High,
+10.1,Navigate to sign up page,"-User registration is successful
+-User is redirected to Newsfeed Page
+",Ready to Test,,,
+10.2,Enter valid age in the range of 13 and 18,,,,,
+10.3,Fill all other fields with valid data,,,,,
+10.4,"Click on ""Sign up""",,,,,
+11,Validate providing Female as gender,,,,High,
+11.1,Navigate to sign up page,"-User registration is successful
+-User is redirected to Newsfeed Page
+",Ready to Test,,,
+11.2,Provide Female in Gender field,,,,,
+11.3,Fill all other fields with valid data,,,,,
+11.4,"Click on ""Sign up""",,,,,
+12,Validate providing Male as gender,,,,Medium,
+11.1,Navigate to sign up page,"-User registration is successful
+-User is redirected to Newsfeed Page
+",Ready to Test,,,
+11.2,Provide Male in Gender field,,,,,
+11.3,Fill all other fields with valid data,,,,,
+11.4,"Click on ""Sign up""",,,,,
+13,Apply Boundary-value analysis on age field (13 & 18),,,,High,
+14,Apply Boundary-value analysis on age field (18 & 120),,,,High,
