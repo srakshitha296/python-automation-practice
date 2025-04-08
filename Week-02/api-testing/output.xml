@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.11.4 on win32)" generated="2025-04-09T00:22:54.930444" rpa="false" schemaversion="5">
+<suite id="s1" name="Post Create Test" source="C:\python-automation-practice\Week-02\api-testing\post_create_test.robot">
+<test id="s1-t1" name="API TESTING" line="54">
+<kw name="Create New post">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-04-09T00:22:55.067543" level="INFO">Creating Session using : alias=new_session, url=https://jsonplaceholder.typicode.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>new_session</arg>
+<arg>${api_url}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-04-09T00:22:55.066553" elapsed="0.000990"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-04-09T00:22:55.067543" level="INFO">&amp;{data} = { title=new Post | body=New post from Robotframework | userId=11 }</msg>
+<var>&amp;{data}</var>
+<arg>title=${title}</arg>
+<arg>body=${body}</arg>
+<arg>userId=11</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-04-09T00:22:55.067543" elapsed="0.000000"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-04-09T00:22:55.801949" level="INFO">POST Request : url=https://jsonplaceholder.typicode.com/posts 
+ path_url=/posts 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '77', 'Content-Type': 'application/json'} 
+ body=b'{"title": "new Post", "body": "New post from Robotframework", "userId": "11"}' 
+ </msg>
+<msg time="2025-04-09T00:22:55.801949" level="INFO">POST Response : url=https://jsonplaceholder.typicode.com/posts 
+ status=201, reason=Created 
+ headers={'Date': 'Tue, 08 Apr 2025 18:52:56 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '98', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1744138376&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=KxnnNuCaIi2Pi0Hhzo5Xy%2BvljLHk9qYgRJUsk%2Fd8PMA%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1744138376&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=KxnnNuCaIi2Pi0Hhzo5Xy%2BvljLHk9qYgRJUsk%2Fd8PMA%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '999', 'X-Ratelimit-Reset': '1744138377', 'Vary': 'Origin, X-HTTP-Method-Override, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Expires': '-1', 'Access-Control-Expose-Headers': 'Location', 'Location': 'https://jsonplaceholder.typicode.com/posts/101', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"62-v0kmcBg24IJcc3xftH34Rr7TajU"', 'Via': '1.1 vegur', 'cf-cache-status': 'DYNAMIC', 'Server': 'cloudflare', 'CF-RAY': '92d3f6f5a807ee7e-MXP', 'alt-svc': 'h3=":443"; ma=86400', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=160042&amp;min_rtt=159057&amp;rtt_var=61617&amp;sent=6&amp;recv=7&amp;lost=0&amp;retrans=0&amp;sent_bytes=2841&amp;recv_bytes=935&amp;delivery_rate=23361&amp;cwnd=252&amp;unsent_bytes=0&amp;cid=0452f4e921de3c32&amp;ts=289&amp;x=0"'} 
+ body={
+  "title": "new Post",
+  "body": "New post from Robotframework",
+  "userId": "11",
+  "id": 101
+} 
+ </msg>
+<msg time="2025-04-09T00:22:55.801949" level="INFO">C:\Users\sraks\AppData\Roaming\Python\Python311\site-packages\urllib3\connectionpool.py:1100: InsecureRequestWarning: Unverified HTTPS request is being made to host 'jsonplaceholder.typicode.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2025-04-09T00:22:55.803031" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<var>${response}</var>
+<arg>new_session</arg>
+<arg>/posts</arg>
+<arg>json=${data}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-04-09T00:22:55.067543" elapsed="0.735488"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2025-04-09T00:22:55.803954" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<arg>${response}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2025-04-09T00:22:55.803954" elapsed="0.000000"/>
+</kw>
+<kw name="Validate Status code">
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>${expected_code}</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2025-04-09T00:22:55.805038" elapsed="0.001008"/>
+</kw>
+<arg>201</arg>
+<status status="PASS" start="2025-04-09T00:22:55.805038" elapsed="0.001008"/>
+</kw>
+<kw name="Validate contents">
+<kw name="Convert To Dictionary" owner="Collections">
+<msg time="2025-04-09T00:22:55.808042" level="INFO">&amp;{resp_body} = { title=new Post | body=New post from Robotframework | userId=11 | id=101 }</msg>
+<var>&amp;{resp_body}</var>
+<arg>${res.json()}</arg>
+<doc>Converts the given ``item`` to a Python ``dict`` type.</doc>
+<status status="PASS" start="2025-04-09T00:22:55.807033" elapsed="0.001009"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${resp_body['title']}</arg>
+<arg>${provided['title']}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-04-09T00:22:55.808042" elapsed="0.001001"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${resp_body['body']}</arg>
+<arg>${provided['body']}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-04-09T00:22:55.809043" elapsed="0.001005"/>
+</kw>
+<arg>${data}</arg>
+<arg>${response}</arg>
+<status status="PASS" start="2025-04-09T00:22:55.806046" elapsed="0.004002"/>
+</kw>
+<kw name="Display response">
+<kw name="Convert To Dictionary" owner="Collections">
+<msg time="2025-04-09T00:22:55.810448" level="INFO">&amp;{resp_body} = { title=new Post | body=New post from Robotframework | userId=11 | id=101 }</msg>
+<var>&amp;{resp_body}</var>
+<arg>${res.json()}</arg>
+<doc>Converts the given ``item`` to a Python ``dict`` type.</doc>
+<status status="PASS" start="2025-04-09T00:22:55.810448" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>ID: ${resp_body['id']}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-04-09T00:22:55.810448" elapsed="0.001004"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Title: ${resp_body['title']}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-04-09T00:22:55.811452" elapsed="0.000998"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Body: ${resp_body['body']}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-04-09T00:22:55.812450" elapsed="0.000000"/>
+</kw>
+<arg>${response}</arg>
+<status status="PASS" start="2025-04-09T00:22:55.810448" elapsed="0.002002"/>
+</kw>
+<arg>new Post</arg>
+<arg>New post from Robotframework</arg>
+<status status="PASS" start="2025-04-09T00:22:55.066553" elapsed="0.746899"/>
+</kw>
+<kw name="Update post">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-04-09T00:22:55.814456" level="INFO">&amp;{new_data} = { title=updated post | body=updated post form robot framework | id=1 }</msg>
+<var>&amp;{new_data}</var>
+<arg>title=${title}</arg>
+<arg>body=${body}</arg>
+<arg>id=${id}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-04-09T00:22:55.814456" elapsed="0.000000"/>
+</kw>
+<kw name="PUT On Session" owner="RequestsLibrary">
+<msg time="2025-04-09T00:22:56.337577" level="INFO">PUT Request : url=https://jsonplaceholder.typicode.com/posts/1 
+ path_url=/posts/1 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '81', 'Content-Type': 'application/json'} 
+ body=b'{"title": "updated post", "body": "updated post form robot framework", "id": "1"}' 
+ </msg>
+<msg time="2025-04-09T00:22:56.337577" level="INFO">PUT Response : url=https://jsonplaceholder.typicode.com/posts/1 
+ status=200, reason=OK 
+ headers={'Date': 'Tue, 08 Apr 2025 18:52:57 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'cloudflare', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1744138377&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=FkMxboP0MqIKpg5rjuA8yUAcraRZDzYyFJx3vgAsAsI%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1744138377&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=FkMxboP0MqIKpg5rjuA8yUAcraRZDzYyFJx3vgAsAsI%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '999', 'X-Ratelimit-Reset': '1744138437', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Expires': '-1', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"57-IjOoBVRiatj+3l/EEYM94xF2lP0"', 'Via': '1.1 vegur', 'Cf-Cache-Status': 'DYNAMIC', 'Content-Encoding': 'gzip', 'CF-RAY': '92d3f6f7ac3dee7e-MXP', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body={
+  "title": "updated post",
+  "body": "updated post form robot framework",
+  "id": 1
+} 
+ </msg>
+<msg time="2025-04-09T00:22:56.337577" level="INFO">C:\Users\sraks\AppData\Roaming\Python\Python311\site-packages\urllib3\connectionpool.py:1100: InsecureRequestWarning: Unverified HTTPS request is being made to host 'jsonplaceholder.typicode.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2025-04-09T00:22:56.338578" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>new_session</arg>
+<arg>/posts/${id}</arg>
+<arg>json=&amp;{new_data}</arg>
+<doc>Sends a PUT request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-04-09T00:22:55.814456" elapsed="0.524122"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2025-04-09T00:22:56.339974" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<arg>${response}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2025-04-09T00:22:56.339497" elapsed="0.000477"/>
+</kw>
+<kw name="Validate Status code">
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>${expected_code}</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2025-04-09T00:22:56.341066" elapsed="0.000000"/>
+</kw>
+<arg>200</arg>
+<status status="PASS" start="2025-04-09T00:22:56.339974" elapsed="0.001092"/>
+</kw>
+<kw name="Validate contents">
+<kw name="Convert To Dictionary" owner="Collections">
+<msg time="2025-04-09T00:22:56.341066" level="INFO">&amp;{resp_body} = { title=updated post | body=updated post form robot framework | id=1 }</msg>
+<var>&amp;{resp_body}</var>
+<arg>${res.json()}</arg>
+<doc>Converts the given ``item`` to a Python ``dict`` type.</doc>
+<status status="PASS" start="2025-04-09T00:22:56.341066" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${resp_body['title']}</arg>
+<arg>${provided['title']}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-04-09T00:22:56.342058" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${resp_body['body']}</arg>
+<arg>${provided['body']}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-04-09T00:22:56.342058" elapsed="0.001017"/>
+</kw>
+<arg>${new_data}</arg>
+<arg>${response}</arg>
+<status status="PASS" start="2025-04-09T00:22:56.341066" elapsed="0.002009"/>
+</kw>
+<kw name="Display response">
+<kw name="Convert To Dictionary" owner="Collections">
+<msg time="2025-04-09T00:22:56.343075" level="INFO">&amp;{resp_body} = { title=updated post | body=updated post form robot framework | id=1 }</msg>
+<var>&amp;{resp_body}</var>
+<arg>${res.json()}</arg>
+<doc>Converts the given ``item`` to a Python ``dict`` type.</doc>
+<status status="PASS" start="2025-04-09T00:22:56.343075" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>ID: ${resp_body['id']}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-04-09T00:22:56.343075" elapsed="0.001370"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Title: ${resp_body['title']}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-04-09T00:22:56.344445" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Body: ${resp_body['body']}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-04-09T00:22:56.344445" elapsed="0.001006"/>
+</kw>
+<arg>${response}</arg>
+<status status="PASS" start="2025-04-09T00:22:56.343075" elapsed="0.002376"/>
+</kw>
+<arg>updated post</arg>
+<arg>updated post form robot framework</arg>
+<arg>1</arg>
+<status status="PASS" start="2025-04-09T00:22:55.813452" elapsed="0.531999"/>
+</kw>
+<kw name="Delete post">
+<kw name="DELETE On Session" owner="RequestsLibrary">
+<msg time="2025-04-09T00:22:56.646870" level="INFO">DELETE Request : url=https://jsonplaceholder.typicode.com/posts/1 
+ path_url=/posts/1 
+ headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg time="2025-04-09T00:22:56.646870" level="INFO">DELETE Response : url=https://jsonplaceholder.typicode.com/posts/1 
+ status=200, reason=OK 
+ headers={'Date': 'Tue, 08 Apr 2025 18:52:57 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '2', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1744138377&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=FkMxboP0MqIKpg5rjuA8yUAcraRZDzYyFJx3vgAsAsI%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1744138377&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=FkMxboP0MqIKpg5rjuA8yUAcraRZDzYyFJx3vgAsAsI%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '998', 'X-Ratelimit-Reset': '1744138437', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Expires': '-1', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"', 'Via': '1.1 vegur', 'cf-cache-status': 'DYNAMIC', 'Server': 'cloudflare', 'CF-RAY': '92d3f6fafa44ee7e-MXP', 'alt-svc': 'h3=":443"; ma=86400', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=166282&amp;min_rtt=159057&amp;rtt_var=46085&amp;sent=14&amp;recv=12&amp;lost=0&amp;retrans=0&amp;sent_bytes=6153&amp;recv_bytes=1488&amp;delivery_rate=23361&amp;cwnd=257&amp;unsent_bytes=0&amp;cid=0452f4e921de3c32&amp;ts=1136&amp;x=0"'} 
+ body={} 
+ </msg>
+<msg time="2025-04-09T00:22:56.646870" level="INFO">C:\Users\sraks\AppData\Roaming\Python\Python311\site-packages\urllib3\connectionpool.py:1100: InsecureRequestWarning: Unverified HTTPS request is being made to host 'jsonplaceholder.typicode.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2025-04-09T00:22:56.647871" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>new_session</arg>
+<arg>/posts/${id}</arg>
+<doc>Sends a DELETE request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-04-09T00:22:56.346452" elapsed="0.301419"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2025-04-09T00:22:56.648871" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<arg>${response}</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2025-04-09T00:22:56.647871" elapsed="0.001000"/>
+</kw>
+<kw name="Validate Status code">
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>${expected_code}</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2025-04-09T00:22:56.648871" elapsed="0.000000"/>
+</kw>
+<arg>200</arg>
+<status status="PASS" start="2025-04-09T00:22:56.648871" elapsed="0.000000"/>
+</kw>
+<arg>1</arg>
+<status status="PASS" start="2025-04-09T00:22:56.345451" elapsed="0.303420"/>
+</kw>
+<status status="PASS" start="2025-04-09T00:22:55.065537" elapsed="1.584365"/>
+</test>
+<status status="PASS" start="2025-04-09T00:22:54.931760" elapsed="1.719118"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Post Create Test" id="s1" pass="1" fail="0" skip="0">Post Create Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
