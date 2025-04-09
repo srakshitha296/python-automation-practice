@@ -1,121 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.11.4 on win32)" generated="2025-04-09T12:55:26.588299" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.11.4 on win32)" generated="2025-04-09T13:01:05.180355" rpa="false" schemaversion="5">
 <suite id="s1" name="File Automation" source="C:\python-automation-practice\Week-02\File Automation\file_automation.robot">
-<test id="s1-t1" name="Test file automation" line="51">
+<test id="s1-t1" name="Test file automation" line="49">
 <kw name="Create a folder">
 <kw name="Create Directory" owner="OperatingSystem">
-<msg time="2025-04-09T12:55:26.620139" level="INFO" html="true">Directory '&lt;a href="file://C:\python-automation-practice\Week-02\File Automation\new_folder"&gt;C:\python-automation-practice\Week-02\File Automation\new_folder&lt;/a&gt;' already exists.</msg>
+<msg time="2025-04-09T13:01:05.219788" level="INFO" html="true">Created directory '&lt;a href="file://C:\python-automation-practice\Week-02\File Automation\new_folder"&gt;C:\python-automation-practice\Week-02\File Automation\new_folder&lt;/a&gt;'.</msg>
 <arg>${folder_name}</arg>
 <doc>Creates the specified directory.</doc>
-<status status="PASS" start="2025-04-09T12:55:26.620139" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-09T13:01:05.219788" elapsed="0.000000"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Folder created</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-04-09T12:55:26.620139" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-09T13:01:05.219788" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2025-04-09T12:55:26.620139" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-09T13:01:05.219788" elapsed="0.000000"/>
 </kw>
 <kw name="Create a file">
 <kw name="Create File" owner="OperatingSystem">
-<msg time="2025-04-09T12:55:26.620139" level="INFO" html="true">Created file '&lt;a href="file://C:\python-automation-practice\Week-02\File Automation\new_folder\file1.txt"&gt;C:\python-automation-practice\Week-02\File Automation\new_folder\file1.txt&lt;/a&gt;'.</msg>
+<msg time="2025-04-09T13:01:05.219788" level="INFO" html="true">Created file '&lt;a href="file://C:\python-automation-practice\Week-02\File Automation\new_folder\file1.txt"&gt;C:\python-automation-practice\Week-02\File Automation\new_folder\file1.txt&lt;/a&gt;'.</msg>
 <arg>${folder_name}/${file_name}</arg>
 <doc>Creates a file with the given content and encoding.</doc>
-<status status="PASS" start="2025-04-09T12:55:26.620139" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-09T13:01:05.219788" elapsed="0.000000"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>File created</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-04-09T12:55:26.620139" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-09T13:01:05.219788" elapsed="0.000000"/>
 </kw>
 <arg>file1.txt</arg>
-<status status="PASS" start="2025-04-09T12:55:26.620139" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-09T13:01:05.219788" elapsed="0.000000"/>
 </kw>
 <kw name="Create a file">
 <kw name="Create File" owner="OperatingSystem">
-<msg time="2025-04-09T12:55:26.620139" level="INFO" html="true">Created file '&lt;a href="file://C:\python-automation-practice\Week-02\File Automation\new_folder\file2.txt"&gt;C:\python-automation-practice\Week-02\File Automation\new_folder\file2.txt&lt;/a&gt;'.</msg>
+<msg time="2025-04-09T13:01:05.227153" level="INFO" html="true">Created file '&lt;a href="file://C:\python-automation-practice\Week-02\File Automation\new_folder\file2.txt"&gt;C:\python-automation-practice\Week-02\File Automation\new_folder\file2.txt&lt;/a&gt;'.</msg>
 <arg>${folder_name}/${file_name}</arg>
 <doc>Creates a file with the given content and encoding.</doc>
-<status status="PASS" start="2025-04-09T12:55:26.620139" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-09T13:01:05.219788" elapsed="0.007365"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>File created</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-04-09T12:55:26.620139" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-09T13:01:05.227153" elapsed="0.000000"/>
 </kw>
 <arg>file2.txt</arg>
-<status status="PASS" start="2025-04-09T12:55:26.620139" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-09T13:01:05.219788" elapsed="0.007365"/>
 </kw>
 <kw name="Add contents">
 <kw name="Append To File" owner="OperatingSystem">
-<msg time="2025-04-09T12:55:26.627299" level="INFO" html="true">Appended to file '&lt;a href="file://C:\python-automation-practice\Week-02\File Automation\new_folder\file1.txt"&gt;C:\python-automation-practice\Week-02\File Automation\new_folder\file1.txt&lt;/a&gt;'.</msg>
+<msg time="2025-04-09T13:01:05.229269" level="INFO" html="true">Appended to file '&lt;a href="file://C:\python-automation-practice\Week-02\File Automation\new_folder\file1.txt"&gt;C:\python-automation-practice\Week-02\File Automation\new_folder\file1.txt&lt;/a&gt;'.</msg>
 <arg>${folder_name}/${file_name}</arg>
 <arg>${text}</arg>
 <doc>Appends the given content to the specified file.</doc>
-<status status="PASS" start="2025-04-09T12:55:26.620139" elapsed="0.007160"/>
+<status status="PASS" start="2025-04-09T13:01:05.228193" elapsed="0.001076"/>
 </kw>
 <arg>file1.txt</arg>
 <arg>First line.\nSecond line.\nThird Line.</arg>
-<status status="PASS" start="2025-04-09T12:55:26.620139" elapsed="0.007160"/>
+<status status="PASS" start="2025-04-09T13:01:05.228193" elapsed="0.001076"/>
 </kw>
 <kw name="Add contents">
 <kw name="Append To File" owner="OperatingSystem">
-<msg time="2025-04-09T12:55:26.629473" level="INFO" html="true">Appended to file '&lt;a href="file://C:\python-automation-practice\Week-02\File Automation\new_folder\file2.txt"&gt;C:\python-automation-practice\Week-02\File Automation\new_folder\file2.txt&lt;/a&gt;'.</msg>
+<msg time="2025-04-09T13:01:05.230165" level="INFO" html="true">Appended to file '&lt;a href="file://C:\python-automation-practice\Week-02\File Automation\new_folder\file2.txt"&gt;C:\python-automation-practice\Week-02\File Automation\new_folder\file2.txt&lt;/a&gt;'.</msg>
 <arg>${folder_name}/${file_name}</arg>
 <arg>${text}</arg>
 <doc>Appends the given content to the specified file.</doc>
-<status status="PASS" start="2025-04-09T12:55:26.628327" elapsed="0.001146"/>
+<status status="PASS" start="2025-04-09T13:01:05.229269" elapsed="0.000896"/>
 </kw>
 <arg>file2.txt</arg>
 <arg>Second File</arg>
-<status status="PASS" start="2025-04-09T12:55:26.627299" elapsed="0.002174"/>
+<status status="PASS" start="2025-04-09T13:01:05.229269" elapsed="0.001896"/>
 </kw>
 <kw name="Read">
 <kw name="File Should Exist" owner="OperatingSystem">
-<msg time="2025-04-09T12:55:26.630241" level="INFO" html="true">File '&lt;a href="file://C:\python-automation-practice\Week-02\File Automation\new_folder\file1.txt"&gt;C:\python-automation-practice\Week-02\File Automation\new_folder\file1.txt&lt;/a&gt;' exists.</msg>
+<msg time="2025-04-09T13:01:05.231165" level="INFO" html="true">File '&lt;a href="file://C:\python-automation-practice\Week-02\File Automation\new_folder\file1.txt"&gt;C:\python-automation-practice\Week-02\File Automation\new_folder\file1.txt&lt;/a&gt;' exists.</msg>
 <arg>${folder_name}/${file_name}</arg>
 <doc>Fails unless the given ``path`` points to an existing file.</doc>
-<status status="PASS" start="2025-04-09T12:55:26.630241" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-09T13:01:05.231165" elapsed="0.000000"/>
 </kw>
 <kw name="Get File" owner="OperatingSystem">
-<msg time="2025-04-09T12:55:26.630241" level="INFO" html="true">Getting file '&lt;a href="file://C:\python-automation-practice\Week-02\File Automation\new_folder\file1.txt"&gt;C:\python-automation-practice\Week-02\File Automation\new_folder\file1.txt&lt;/a&gt;'.</msg>
-<msg time="2025-04-09T12:55:26.632434" level="INFO">${contents} = First line.
+<msg time="2025-04-09T13:01:05.232257" level="INFO" html="true">Getting file '&lt;a href="file://C:\python-automation-practice\Week-02\File Automation\new_folder\file1.txt"&gt;C:\python-automation-practice\Week-02\File Automation\new_folder\file1.txt&lt;/a&gt;'.</msg>
+<msg time="2025-04-09T13:01:05.233268" level="INFO">${contents} = First line.
 Second line.
 Third Line.</msg>
 <var>${contents}</var>
 <arg>${folder_name}/${file_name}</arg>
 <doc>Returns the contents of a specified file.</doc>
-<status status="PASS" start="2025-04-09T12:55:26.630241" elapsed="0.002193"/>
+<status status="PASS" start="2025-04-09T13:01:05.231165" elapsed="0.002103"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${contents}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-04-09T12:55:26.632434" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-09T13:01:05.234167" elapsed="0.000000"/>
 </kw>
 <arg>file1.txt</arg>
-<status status="PASS" start="2025-04-09T12:55:26.629473" elapsed="0.002961"/>
+<status status="PASS" start="2025-04-09T13:01:05.231165" elapsed="0.003002"/>
 </kw>
 <kw name="Merge files">
 <kw name="Get File" owner="OperatingSystem">
-<msg time="2025-04-09T12:55:26.632434" level="INFO" html="true">Getting file '&lt;a href="file://C:\python-automation-practice\Week-02\File Automation\new_folder\file1.txt"&gt;C:\python-automation-practice\Week-02\File Automation\new_folder\file1.txt&lt;/a&gt;'.</msg>
-<msg time="2025-04-09T12:55:26.634668" level="INFO">${content1} = First line.
+<msg time="2025-04-09T13:01:05.235162" level="INFO" html="true">Getting file '&lt;a href="file://C:\python-automation-practice\Week-02\File Automation\new_folder\file1.txt"&gt;C:\python-automation-practice\Week-02\File Automation\new_folder\file1.txt&lt;/a&gt;'.</msg>
+<msg time="2025-04-09T13:01:05.235162" level="INFO">${content1} = First line.
 Second line.
 Third Line.</msg>
 <var>${content1}</var>
 <arg>${folder_name}/${f1}</arg>
 <doc>Returns the contents of a specified file.</doc>
-<status status="PASS" start="2025-04-09T12:55:26.632434" elapsed="0.002234"/>
+<status status="PASS" start="2025-04-09T13:01:05.235162" elapsed="0.000999"/>
 </kw>
 <kw name="Get File" owner="OperatingSystem">
-<msg time="2025-04-09T12:55:26.634668" level="INFO" html="true">Getting file '&lt;a href="file://C:\python-automation-practice\Week-02\File Automation\new_folder\file2.txt"&gt;C:\python-automation-practice\Week-02\File Automation\new_folder\file2.txt&lt;/a&gt;'.</msg>
-<msg time="2025-04-09T12:55:26.636213" level="INFO">${content2} = Second File</msg>
+<msg time="2025-04-09T13:01:05.236161" level="INFO" html="true">Getting file '&lt;a href="file://C:\python-automation-practice\Week-02\File Automation\new_folder\file2.txt"&gt;C:\python-automation-practice\Week-02\File Automation\new_folder\file2.txt&lt;/a&gt;'.</msg>
+<msg time="2025-04-09T13:01:05.237515" level="INFO">${content2} = Second File</msg>
 <var>${content2}</var>
 <arg>${folder_name}/${f2}</arg>
 <doc>Returns the contents of a specified file.</doc>
-<status status="PASS" start="2025-04-09T12:55:26.634668" elapsed="0.001545"/>
+<status status="PASS" start="2025-04-09T13:01:05.236161" elapsed="0.001354"/>
 </kw>
 <kw name="Catenate" owner="BuiltIn">
-<msg time="2025-04-09T12:55:26.636213" level="INFO">${merged_content} = First line.
+<msg time="2025-04-09T13:01:05.237515" level="INFO">${merged_content} = First line.
 Second line.
 Third Line.
 Second File</msg>
@@ -124,118 +124,103 @@ Second File</msg>
 <arg>${content1}</arg>
 <arg>${content2}</arg>
 <doc>Catenates the given items together and returns the resulted string.</doc>
-<status status="PASS" start="2025-04-09T12:55:26.636213" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-09T13:01:05.237515" elapsed="0.000000"/>
 </kw>
 <kw name="Create a file">
 <kw name="Create File" owner="OperatingSystem">
-<msg time="2025-04-09T12:55:26.637230" level="INFO" html="true">Created file '&lt;a href="file://C:\python-automation-practice\Week-02\File Automation\new_folder\file3.txt"&gt;C:\python-automation-practice\Week-02\File Automation\new_folder\file3.txt&lt;/a&gt;'.</msg>
+<msg time="2025-04-09T13:01:05.238523" level="INFO" html="true">Created file '&lt;a href="file://C:\python-automation-practice\Week-02\File Automation\new_folder\file3.txt"&gt;C:\python-automation-practice\Week-02\File Automation\new_folder\file3.txt&lt;/a&gt;'.</msg>
 <arg>${folder_name}/${file_name}</arg>
 <doc>Creates a file with the given content and encoding.</doc>
-<status status="PASS" start="2025-04-09T12:55:26.636213" elapsed="0.001017"/>
+<status status="PASS" start="2025-04-09T13:01:05.237515" elapsed="0.001008"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>File created</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-04-09T12:55:26.637230" elapsed="0.000832"/>
+<status status="PASS" start="2025-04-09T13:01:05.238523" elapsed="0.000000"/>
 </kw>
 <arg>${f3}</arg>
-<status status="PASS" start="2025-04-09T12:55:26.636213" elapsed="0.001849"/>
+<status status="PASS" start="2025-04-09T13:01:05.237515" elapsed="0.001008"/>
 </kw>
 <kw name="Add contents">
 <kw name="Append To File" owner="OperatingSystem">
-<msg time="2025-04-09T12:55:26.639071" level="INFO" html="true">Appended to file '&lt;a href="file://C:\python-automation-practice\Week-02\File Automation\new_folder\file3.txt"&gt;C:\python-automation-practice\Week-02\File Automation\new_folder\file3.txt&lt;/a&gt;'.</msg>
+<msg time="2025-04-09T13:01:05.240577" level="INFO" html="true">Appended to file '&lt;a href="file://C:\python-automation-practice\Week-02\File Automation\new_folder\file3.txt"&gt;C:\python-automation-practice\Week-02\File Automation\new_folder\file3.txt&lt;/a&gt;'.</msg>
 <arg>${folder_name}/${file_name}</arg>
 <arg>${text}</arg>
 <doc>Appends the given content to the specified file.</doc>
-<status status="PASS" start="2025-04-09T12:55:26.638062" elapsed="0.001009"/>
+<status status="PASS" start="2025-04-09T13:01:05.239522" elapsed="0.001055"/>
 </kw>
 <arg>${f3}</arg>
 <arg>${merged_content}</arg>
-<status status="PASS" start="2025-04-09T12:55:26.638062" elapsed="0.001009"/>
+<status status="PASS" start="2025-04-09T13:01:05.239522" elapsed="0.001055"/>
 </kw>
 <arg>file1.txt</arg>
 <arg>file2.txt</arg>
 <arg>file3.txt</arg>
-<status status="PASS" start="2025-04-09T12:55:26.632434" elapsed="0.006637"/>
+<status status="PASS" start="2025-04-09T13:01:05.235162" elapsed="0.005415"/>
 </kw>
 <kw name="Read">
 <kw name="File Should Exist" owner="OperatingSystem">
-<msg time="2025-04-09T12:55:26.640176" level="INFO" html="true">File '&lt;a href="file://C:\python-automation-practice\Week-02\File Automation\new_folder\file3.txt"&gt;C:\python-automation-practice\Week-02\File Automation\new_folder\file3.txt&lt;/a&gt;' exists.</msg>
+<msg time="2025-04-09T13:01:05.241522" level="INFO" html="true">File '&lt;a href="file://C:\python-automation-practice\Week-02\File Automation\new_folder\file3.txt"&gt;C:\python-automation-practice\Week-02\File Automation\new_folder\file3.txt&lt;/a&gt;' exists.</msg>
 <arg>${folder_name}/${file_name}</arg>
 <doc>Fails unless the given ``path`` points to an existing file.</doc>
-<status status="PASS" start="2025-04-09T12:55:26.639071" elapsed="0.001105"/>
+<status status="PASS" start="2025-04-09T13:01:05.240577" elapsed="0.000945"/>
 </kw>
 <kw name="Get File" owner="OperatingSystem">
-<msg time="2025-04-09T12:55:26.640176" level="INFO" html="true">Getting file '&lt;a href="file://C:\python-automation-practice\Week-02\File Automation\new_folder\file3.txt"&gt;C:\python-automation-practice\Week-02\File Automation\new_folder\file3.txt&lt;/a&gt;'.</msg>
-<msg time="2025-04-09T12:55:26.640176" level="INFO">${contents} = First line.
+<msg time="2025-04-09T13:01:05.241522" level="INFO" html="true">Getting file '&lt;a href="file://C:\python-automation-practice\Week-02\File Automation\new_folder\file3.txt"&gt;C:\python-automation-practice\Week-02\File Automation\new_folder\file3.txt&lt;/a&gt;'.</msg>
+<msg time="2025-04-09T13:01:05.242607" level="INFO">${contents} = First line.
 Second line.
 Third Line.
 Second File</msg>
 <var>${contents}</var>
 <arg>${folder_name}/${file_name}</arg>
 <doc>Returns the contents of a specified file.</doc>
-<status status="PASS" start="2025-04-09T12:55:26.640176" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-09T13:01:05.241522" elapsed="0.001085"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${contents}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-04-09T12:55:26.640176" elapsed="0.001993"/>
+<status status="PASS" start="2025-04-09T13:01:05.243523" elapsed="0.000000"/>
 </kw>
 <arg>file3.txt</arg>
-<status status="PASS" start="2025-04-09T12:55:26.639071" elapsed="0.003098"/>
+<status status="PASS" start="2025-04-09T13:01:05.240577" elapsed="0.002946"/>
 </kw>
 <kw name="Rename file">
 <kw name="Move File" owner="OperatingSystem">
-<msg time="2025-04-09T12:55:26.647136" level="INFO" html="true">Moved file from '&lt;a href="file://C:\python-automation-practice\Week-02\File Automation\new_folder\file3.txt"&gt;C:\python-automation-practice\Week-02\File Automation\new_folder\file3.txt&lt;/a&gt;' to '&lt;a href="file://C:\python-automation-practice\Week-02\File Automation\new_folder\final.txt"&gt;C:\python-automation-practice\Week-02\File Automation\new_folder\final.txt&lt;/a&gt;'.</msg>
+<msg time="2025-04-09T13:01:05.244522" level="INFO" html="true">Moved file from '&lt;a href="file://C:\python-automation-practice\Week-02\File Automation\new_folder\file3.txt"&gt;C:\python-automation-practice\Week-02\File Automation\new_folder\file3.txt&lt;/a&gt;' to '&lt;a href="file://C:\python-automation-practice\Week-02\File Automation\new_folder\final.txt"&gt;C:\python-automation-practice\Week-02\File Automation\new_folder\final.txt&lt;/a&gt;'.</msg>
 <arg>${folder_name}/${old_name}</arg>
 <arg>${folder_name}/${new_name}</arg>
 <doc>Moves the source file into the destination.</doc>
-<status status="PASS" start="2025-04-09T12:55:26.643176" elapsed="0.003960"/>
+<status status="PASS" start="2025-04-09T13:01:05.244522" elapsed="0.000000"/>
 </kw>
 <kw name="File Should Exist" owner="OperatingSystem">
-<msg time="2025-04-09T12:55:26.648201" level="INFO" html="true">File '&lt;a href="file://C:\python-automation-practice\Week-02\File Automation\new_folder\final.txt"&gt;C:\python-automation-practice\Week-02\File Automation\new_folder\final.txt&lt;/a&gt;' exists.</msg>
+<msg time="2025-04-09T13:01:05.244522" level="INFO" html="true">File '&lt;a href="file://C:\python-automation-practice\Week-02\File Automation\new_folder\final.txt"&gt;C:\python-automation-practice\Week-02\File Automation\new_folder\final.txt&lt;/a&gt;' exists.</msg>
 <arg>${folder_name}/${new_name}</arg>
 <doc>Fails unless the given ``path`` points to an existing file.</doc>
-<status status="PASS" start="2025-04-09T12:55:26.648201" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-09T13:01:05.244522" elapsed="0.000000"/>
 </kw>
 <kw name="File Should Not Exist" owner="OperatingSystem">
-<msg time="2025-04-09T12:55:26.649243" level="INFO" html="true">File '&lt;a href="file://C:\python-automation-practice\Week-02\File Automation\new_folder\file3.txt"&gt;C:\python-automation-practice\Week-02\File Automation\new_folder\file3.txt&lt;/a&gt;' does not exist.</msg>
+<msg time="2025-04-09T13:01:05.248578" level="INFO" html="true">File '&lt;a href="file://C:\python-automation-practice\Week-02\File Automation\new_folder\file3.txt"&gt;C:\python-automation-practice\Week-02\File Automation\new_folder\file3.txt&lt;/a&gt;' does not exist.</msg>
 <arg>${folder_name}/${old_name}</arg>
 <doc>Fails if the given path points to an existing file.</doc>
-<status status="PASS" start="2025-04-09T12:55:26.648201" elapsed="0.001042"/>
+<status status="PASS" start="2025-04-09T13:01:05.244522" elapsed="0.004056"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Renamed: ${old_name} to ${new_name}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-04-09T12:55:26.649243" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-09T13:01:05.248578" elapsed="0.000000"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${new_name} exists ${old_name} removed.</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-04-09T12:55:26.649243" elapsed="0.000901"/>
+<status status="PASS" start="2025-04-09T13:01:05.248578" elapsed="0.000000"/>
 </kw>
 <arg>file3.txt</arg>
 <arg>final.txt</arg>
-<status status="PASS" start="2025-04-09T12:55:26.642169" elapsed="0.007975"/>
+<status status="PASS" start="2025-04-09T13:01:05.243523" elapsed="0.005055"/>
 </kw>
-<kw name="Delete folder">
-<kw name="Remove Directory" owner="OperatingSystem">
-<msg time="2025-04-09T12:55:26.652410" level="INFO" html="true">Removed directory '&lt;a href="file://C:\python-automation-practice\Week-02\File Automation\new_folder"&gt;C:\python-automation-practice\Week-02\File Automation\new_folder&lt;/a&gt;'.</msg>
-<arg>${folder_name}</arg>
-<arg>recursive=True</arg>
-<doc>Removes the directory pointed to by the given ``path``.</doc>
-<status status="PASS" start="2025-04-09T12:55:26.650144" elapsed="0.002266"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>Folder Deleted</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-04-09T12:55:26.652410" elapsed="0.000999"/>
-</kw>
-<status status="PASS" start="2025-04-09T12:55:26.650144" elapsed="0.003265"/>
-</kw>
-<status status="PASS" start="2025-04-09T12:55:26.620139" elapsed="0.033270"/>
+<status status="PASS" start="2025-04-09T13:01:05.219788" elapsed="0.028790"/>
 </test>
-<status status="PASS" start="2025-04-09T12:55:26.589495" elapsed="0.064914"/>
+<status status="PASS" start="2025-04-09T13:01:05.180355" elapsed="0.070261"/>
 </suite>
 <statistics>
 <total>

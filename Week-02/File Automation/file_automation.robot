@@ -62,4 +62,4 @@ Test file automation
     
     Rename file    file3.txt    final.txt
 
-    Delete folder
+    #Delete folder
