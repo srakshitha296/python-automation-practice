@@ -3,7 +3,6 @@ Library     OperatingSystem
 
 *** Variables ***
 ${folder_name}        new_folder
-# ${file_path}        ${folder_name}/new_file.txt
 
 *** Keywords ***
 Create a folder
@@ -12,7 +11,7 @@ Create a folder
 
 Create a file
     [Arguments]    ${file_name}
-    Create File    ${folder_name}/${file_name}
+    Create File    ${folder_name}/${file_name}   
     Log To Console    File created
 
 Add contents
@@ -37,9 +36,12 @@ Merge files
 Rename file
     [Arguments]    ${old_name}    ${new_name}
     Move File    ${folder_name}/${old_name}    ${folder_name}/${new_name}
+    File Should Exist    ${folder_name}/${new_name}
+    File Should Not Exist    ${folder_name}/${old_name}
+    Log To Console    Renamed: ${old_name} to ${new_name}
+    Log To Console    ${new_name} exists ${old_name} removed.
     
 Delete folder
-    # Remove Directory    ${folder_name}
     Remove Directory    ${folder_name}    recursive=True
     Log To Console    Folder Deleted
 
@@ -59,4 +61,5 @@ Test file automation
     Read       file3.txt
     
     Rename file    file3.txt    final.txt
-    # Delete folder
+
+    Delete folder

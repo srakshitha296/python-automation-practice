@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.11.4 on win32)" generated="2025-04-09T09:44:14.861625" rpa="false" schemaversion="5">
-<suite id="s1" name="Post Create Test" source="C:\python-automation-practice\Week-02\api-testing\post_create_test.robot">
+<robot generator="Robot 7.2.2 (Python 3.11.4 on win32)" generated="2025-04-09T11:50:56.586369" rpa="false" schemaversion="5">
+<suite id="s1" name="Api Testing" source="C:\python-automation-practice\Week-02\api-testing\api_testing.robot">
 <test id="s1-t1" name="API TESTING" line="54">
 <kw name="Create New post">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2025-04-09T09:44:15.073871" level="INFO">Creating Session using : alias=new_session, url=https://jsonplaceholder.typicode.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2025-04-09T11:50:56.788896" level="INFO">Creating Session using : alias=new_session, url=https://jsonplaceholder.typicode.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>new_session</arg>
 <arg>${api_url}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2025-04-09T09:44:15.073871" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-09T11:50:56.788896" elapsed="0.000000"/>
 </kw>
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-04-09T09:44:15.073871" level="INFO">&amp;{data} = { title=new Post | body=New post from Robotframework | userId=11 }</msg>
+<msg time="2025-04-09T11:50:56.789896" level="INFO">&amp;{data} = { title=new Post | body=New post from Robotframework | userId=11 }</msg>
 <var>&amp;{data}</var>
 <arg>title=${title}</arg>
 <arg>body=${body}</arg>
 <arg>userId=11</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-04-09T09:44:15.073871" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-09T11:50:56.788896" elapsed="0.001000"/>
 </kw>
 <kw name="POST On Session" owner="RequestsLibrary">
-<msg time="2025-04-09T09:44:16.180873" level="INFO">POST Request : url=https://jsonplaceholder.typicode.com/posts 
+<msg time="2025-04-09T11:50:59.324270" level="INFO">POST Request : url=https://jsonplaceholder.typicode.com/posts 
  path_url=/posts 
  headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '77', 'Content-Type': 'application/json'} 
  body=b'{"title": "new Post", "body": "New post from Robotframework", "userId": "11"}' 
  </msg>
-<msg time="2025-04-09T09:44:16.186107" level="INFO">POST Response : url=https://jsonplaceholder.typicode.com/posts 
+<msg time="2025-04-09T11:50:59.324270" level="INFO">POST Response : url=https://jsonplaceholder.typicode.com/posts 
  status=201, reason=Created 
- headers={'Date': 'Wed, 09 Apr 2025 04:14:16 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '98', 'Connection': 'keep-alive', 'Server': 'cloudflare', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1744172056&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=WN8%2BcptnmX5m4LDO%2B7hLxH0dLF1lO6w3E2kpEGCPv40%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1744172056&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=WN8%2BcptnmX5m4LDO%2B7hLxH0dLF1lO6w3E2kpEGCPv40%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '999', 'X-Ratelimit-Reset': '1744172098', 'Vary': 'Origin, X-HTTP-Method-Override, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Expires': '-1', 'Access-Control-Expose-Headers': 'Location', 'Location': 'https://jsonplaceholder.typicode.com/posts/101', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"62-v0kmcBg24IJcc3xftH34Rr7TajU"', 'Via': '1.1 vegur', 'Cf-Cache-Status': 'DYNAMIC', 'CF-RAY': '92d72d3b5956eeee-EWR', 'alt-svc': 'h3=":443"; ma=86400'} 
+ headers={'Date': 'Wed, 09 Apr 2025 06:21:00 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '98', 'Connection': 'keep-alive', 'Server': 'cloudflare', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1744179660&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=3OT0xjtMIqGf6z%2BGztG8NrtJDN5uRkbex%2ByM%2B1ci4lk%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1744179660&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=3OT0xjtMIqGf6z%2BGztG8NrtJDN5uRkbex%2ByM%2B1ci4lk%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '999', 'X-Ratelimit-Reset': '1744179718', 'Vary': 'Origin, X-HTTP-Method-Override, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Expires': '-1', 'Access-Control-Expose-Headers': 'Location', 'Location': 'https://jsonplaceholder.typicode.com/posts/101', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"62-v0kmcBg24IJcc3xftH34Rr7TajU"', 'Via': '1.1 vegur', 'Cf-Cache-Status': 'DYNAMIC', 'CF-RAY': '92d7e6d76eb53a4c-BOM', 'alt-svc': 'h3=":443"; ma=86400'} 
  body={
   "title": "new Post",
   "body": "New post from Robotframework",
@@ -35,235 +35,235 @@
   "id": 101
 } 
  </msg>
-<msg time="2025-04-09T09:44:16.186107" level="INFO">C:\Users\sraks\AppData\Roaming\Python\Python311\site-packages\urllib3\connectionpool.py:1100: InsecureRequestWarning: Unverified HTTPS request is being made to host 'jsonplaceholder.typicode.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg time="2025-04-09T11:50:59.324270" level="INFO">C:\Users\sraks\AppData\Roaming\Python\Python311\site-packages\urllib3\connectionpool.py:1100: InsecureRequestWarning: Unverified HTTPS request is being made to host 'jsonplaceholder.typicode.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg time="2025-04-09T09:44:16.186107" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<msg time="2025-04-09T11:50:59.324270" level="INFO">${response} = &lt;Response [201]&gt;</msg>
 <var>${response}</var>
 <arg>new_session</arg>
 <arg>/posts</arg>
 <arg>json=${data}</arg>
 <doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2025-04-09T09:44:15.073871" elapsed="1.112236"/>
+<status status="PASS" start="2025-04-09T11:50:56.789896" elapsed="2.534374"/>
 </kw>
 <kw name="Set Test Variable" owner="BuiltIn">
-<msg time="2025-04-09T09:44:16.186107" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<msg time="2025-04-09T11:50:59.324270" level="INFO">${response} = &lt;Response [201]&gt;</msg>
 <arg>${response}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<status status="PASS" start="2025-04-09T09:44:16.186107" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-09T11:50:59.324270" elapsed="0.000000"/>
 </kw>
 <kw name="Validate Status code">
 <kw name="Status Should Be" owner="RequestsLibrary">
 <arg>${expected_code}</arg>
 <arg>${response}</arg>
 <doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" start="2025-04-09T09:44:16.186107" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-09T11:50:59.324270" elapsed="0.000000"/>
 </kw>
 <arg>201</arg>
-<status status="PASS" start="2025-04-09T09:44:16.186107" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-09T11:50:59.324270" elapsed="0.000000"/>
 </kw>
 <kw name="Validate contents">
 <kw name="Convert To Dictionary" owner="Collections">
-<msg time="2025-04-09T09:44:16.186107" level="INFO">&amp;{resp_body} = { title=new Post | body=New post from Robotframework | userId=11 | id=101 }</msg>
+<msg time="2025-04-09T11:50:59.324270" level="INFO">&amp;{resp_body} = { title=new Post | body=New post from Robotframework | userId=11 | id=101 }</msg>
 <var>&amp;{resp_body}</var>
 <arg>${res.json()}</arg>
 <doc>Converts the given ``item`` to a Python ``dict`` type.</doc>
-<status status="PASS" start="2025-04-09T09:44:16.186107" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-09T11:50:59.324270" elapsed="0.000000"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>${resp_body['title']}</arg>
 <arg>${provided['title']}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-04-09T09:44:16.186107" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-09T11:50:59.324270" elapsed="0.000000"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>${resp_body['body']}</arg>
 <arg>${provided['body']}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-04-09T09:44:16.186107" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-09T11:50:59.324270" elapsed="0.011420"/>
 </kw>
 <arg>${data}</arg>
 <arg>${response}</arg>
-<status status="PASS" start="2025-04-09T09:44:16.186107" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-09T11:50:59.324270" elapsed="0.011420"/>
 </kw>
 <kw name="Display response">
 <kw name="Convert To Dictionary" owner="Collections">
-<msg time="2025-04-09T09:44:16.186107" level="INFO">&amp;{resp_body} = { title=new Post | body=New post from Robotframework | userId=11 | id=101 }</msg>
+<msg time="2025-04-09T11:50:59.336694" level="INFO">&amp;{resp_body} = { title=new Post | body=New post from Robotframework | userId=11 | id=101 }</msg>
 <var>&amp;{resp_body}</var>
 <arg>${res.json()}</arg>
 <doc>Converts the given ``item`` to a Python ``dict`` type.</doc>
-<status status="PASS" start="2025-04-09T09:44:16.186107" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-09T11:50:59.336203" elapsed="0.000491"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>ID: ${resp_body['id']}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-04-09T09:44:16.186107" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-09T11:50:59.336694" elapsed="0.000000"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Title: ${resp_body['title']}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-04-09T09:44:16.186107" elapsed="0.010785"/>
+<status status="PASS" start="2025-04-09T11:50:59.336694" elapsed="0.000000"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Body: ${resp_body['body']}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-04-09T09:44:16.196892" elapsed="0.001970"/>
+<status status="PASS" start="2025-04-09T11:50:59.336694" elapsed="0.002365"/>
 </kw>
 <arg>${response}</arg>
-<status status="PASS" start="2025-04-09T09:44:16.186107" elapsed="0.012755"/>
+<status status="PASS" start="2025-04-09T11:50:59.335690" elapsed="0.003369"/>
 </kw>
 <arg>new Post</arg>
 <arg>New post from Robotframework</arg>
-<status status="PASS" start="2025-04-09T09:44:15.073871" elapsed="1.124991"/>
+<status status="PASS" start="2025-04-09T11:50:56.787897" elapsed="2.551162"/>
 </kw>
 <kw name="Update post">
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2025-04-09T09:44:16.199803" level="INFO">&amp;{new_data} = { title=updated post | body=updated post form robot framework | id=1 }</msg>
+<msg time="2025-04-09T11:50:59.339471" level="INFO">&amp;{new_data} = { title=updated post | body=updated post form robot framework | id=1 }</msg>
 <var>&amp;{new_data}</var>
 <arg>title=${title}</arg>
 <arg>body=${body}</arg>
 <arg>id=${id}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2025-04-09T09:44:16.199803" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-09T11:50:59.339471" elapsed="0.000000"/>
 </kw>
 <kw name="PUT On Session" owner="RequestsLibrary">
-<msg time="2025-04-09T09:44:16.493276" level="INFO">PUT Request : url=https://jsonplaceholder.typicode.com/posts/1 
+<msg time="2025-04-09T11:51:00.560864" level="INFO">PUT Request : url=https://jsonplaceholder.typicode.com/posts/1 
  path_url=/posts/1 
  headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '81', 'Content-Type': 'application/json'} 
  body=b'{"title": "updated post", "body": "updated post form robot framework", "id": "1"}' 
  </msg>
-<msg time="2025-04-09T09:44:16.493276" level="INFO">PUT Response : url=https://jsonplaceholder.typicode.com/posts/1 
+<msg time="2025-04-09T11:51:00.560864" level="INFO">PUT Response : url=https://jsonplaceholder.typicode.com/posts/1 
  status=200, reason=OK 
- headers={'Date': 'Wed, 09 Apr 2025 04:14:17 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1744172057&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=6W4wcpM%2BY6q48ltyCDOHmF12zBdDdtSjfd1v%2FlpjvMA%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1744172057&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=6W4wcpM%2BY6q48ltyCDOHmF12zBdDdtSjfd1v%2FlpjvMA%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '998', 'X-Ratelimit-Reset': '1744172098', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Expires': '-1', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"57-IjOoBVRiatj+3l/EEYM94xF2lP0"', 'Via': '1.1 vegur', 'cf-cache-status': 'DYNAMIC', 'Server': 'cloudflare', 'CF-RAY': '92d72d3d8c19eeee-EWR', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=250316&amp;min_rtt=249951&amp;rtt_var=53207&amp;sent=8&amp;recv=10&amp;lost=0&amp;retrans=0&amp;sent_bytes=4659&amp;recv_bytes=1278&amp;delivery_rate=11674&amp;cwnd=34&amp;unsent_bytes=0&amp;cid=c5aef9b9d3d4a269&amp;ts=679&amp;x=0"'} 
+ headers={'Date': 'Wed, 09 Apr 2025 06:21:01 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1744179661&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=9lgnXLXzJeKNC3K7VuUkWdJ05ofTza5HGGrTYIQoRhQ%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1744179661&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=9lgnXLXzJeKNC3K7VuUkWdJ05ofTza5HGGrTYIQoRhQ%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '998', 'X-Ratelimit-Reset': '1744179718', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Expires': '-1', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"57-IjOoBVRiatj+3l/EEYM94xF2lP0"', 'Via': '1.1 vegur', 'cf-cache-status': 'DYNAMIC', 'Server': 'cloudflare', 'CF-RAY': '92d7e6df38263a4c-BOM', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=532802&amp;min_rtt=442083&amp;rtt_var=163549&amp;sent=7&amp;recv=9&amp;lost=0&amp;retrans=0&amp;sent_bytes=4662&amp;recv_bytes=1278&amp;delivery_rate=6581&amp;cwnd=251&amp;unsent_bytes=0&amp;cid=50cc290b5c514eea&amp;ts=2410&amp;x=0"'} 
  body={
   "title": "updated post",
   "body": "updated post form robot framework",
   "id": 1
 } 
  </msg>
-<msg time="2025-04-09T09:44:16.493276" level="INFO">C:\Users\sraks\AppData\Roaming\Python\Python311\site-packages\urllib3\connectionpool.py:1100: InsecureRequestWarning: Unverified HTTPS request is being made to host 'jsonplaceholder.typicode.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg time="2025-04-09T11:51:00.561895" level="INFO">C:\Users\sraks\AppData\Roaming\Python\Python311\site-packages\urllib3\connectionpool.py:1100: InsecureRequestWarning: Unverified HTTPS request is being made to host 'jsonplaceholder.typicode.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg time="2025-04-09T09:44:16.493276" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2025-04-09T11:51:00.561895" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>new_session</arg>
 <arg>/posts/${id}</arg>
 <arg>json=&amp;{new_data}</arg>
 <doc>Sends a PUT request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2025-04-09T09:44:16.202345" elapsed="0.290931"/>
+<status status="PASS" start="2025-04-09T11:50:59.340480" elapsed="1.221415"/>
 </kw>
 <kw name="Set Test Variable" owner="BuiltIn">
-<msg time="2025-04-09T09:44:16.493276" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2025-04-09T11:51:00.563555" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <arg>${response}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<status status="PASS" start="2025-04-09T09:44:16.493276" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-09T11:51:00.562881" elapsed="0.000674"/>
 </kw>
 <kw name="Validate Status code">
 <kw name="Status Should Be" owner="RequestsLibrary">
 <arg>${expected_code}</arg>
 <arg>${response}</arg>
 <doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" start="2025-04-09T09:44:16.493276" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-09T11:51:00.564055" elapsed="0.000000"/>
 </kw>
 <arg>200</arg>
-<status status="PASS" start="2025-04-09T09:44:16.493276" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-09T11:51:00.563555" elapsed="0.000500"/>
 </kw>
 <kw name="Validate contents">
 <kw name="Convert To Dictionary" owner="Collections">
-<msg time="2025-04-09T09:44:16.493276" level="INFO">&amp;{resp_body} = { title=updated post | body=updated post form robot framework | id=1 }</msg>
+<msg time="2025-04-09T11:51:00.566208" level="INFO">&amp;{resp_body} = { title=updated post | body=updated post form robot framework | id=1 }</msg>
 <var>&amp;{resp_body}</var>
 <arg>${res.json()}</arg>
 <doc>Converts the given ``item`` to a Python ``dict`` type.</doc>
-<status status="PASS" start="2025-04-09T09:44:16.493276" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-09T11:51:00.565217" elapsed="0.000991"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>${resp_body['title']}</arg>
 <arg>${provided['title']}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-04-09T09:44:16.493276" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-09T11:51:00.566704" elapsed="0.001096"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>${resp_body['body']}</arg>
 <arg>${provided['body']}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2025-04-09T09:44:16.493276" elapsed="0.015769"/>
+<status status="PASS" start="2025-04-09T11:51:00.567800" elapsed="0.000916"/>
 </kw>
 <arg>${new_data}</arg>
 <arg>${response}</arg>
-<status status="PASS" start="2025-04-09T09:44:16.493276" elapsed="0.015769"/>
+<status status="PASS" start="2025-04-09T11:51:00.565217" elapsed="0.003499"/>
 </kw>
 <kw name="Display response">
 <kw name="Convert To Dictionary" owner="Collections">
-<msg time="2025-04-09T09:44:16.511583" level="INFO">&amp;{resp_body} = { title=updated post | body=updated post form robot framework | id=1 }</msg>
+<msg time="2025-04-09T11:51:00.569713" level="INFO">&amp;{resp_body} = { title=updated post | body=updated post form robot framework | id=1 }</msg>
 <var>&amp;{resp_body}</var>
 <arg>${res.json()}</arg>
 <doc>Converts the given ``item`` to a Python ``dict`` type.</doc>
-<status status="PASS" start="2025-04-09T09:44:16.509045" elapsed="0.002538"/>
+<status status="PASS" start="2025-04-09T11:51:00.568716" elapsed="0.000997"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>ID: ${resp_body['id']}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-04-09T09:44:16.511583" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-09T11:51:00.569713" elapsed="0.000480"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Title: ${resp_body['title']}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-04-09T09:44:16.511583" elapsed="0.004539"/>
+<status status="PASS" start="2025-04-09T11:51:00.570193" elapsed="0.001153"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Body: ${resp_body['body']}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-04-09T09:44:16.516122" elapsed="0.001011"/>
+<status status="PASS" start="2025-04-09T11:51:00.571346" elapsed="0.001018"/>
 </kw>
 <arg>${response}</arg>
-<status status="PASS" start="2025-04-09T09:44:16.509045" elapsed="0.008088"/>
+<status status="PASS" start="2025-04-09T11:51:00.568716" elapsed="0.003648"/>
 </kw>
 <arg>updated post</arg>
 <arg>updated post form robot framework</arg>
 <arg>1</arg>
-<status status="PASS" start="2025-04-09T09:44:16.199803" elapsed="0.317330"/>
+<status status="PASS" start="2025-04-09T11:50:59.339471" elapsed="1.232893"/>
 </kw>
 <kw name="Delete post">
 <kw name="DELETE On Session" owner="RequestsLibrary">
-<msg time="2025-04-09T09:44:16.790380" level="INFO">DELETE Request : url=https://jsonplaceholder.typicode.com/posts/1 
+<msg time="2025-04-09T11:51:01.350014" level="INFO">DELETE Request : url=https://jsonplaceholder.typicode.com/posts/1 
  path_url=/posts/1 
  headers={'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
  body=None 
  </msg>
-<msg time="2025-04-09T09:44:16.790380" level="INFO">DELETE Response : url=https://jsonplaceholder.typicode.com/posts/1 
+<msg time="2025-04-09T11:51:01.350014" level="INFO">DELETE Response : url=https://jsonplaceholder.typicode.com/posts/1 
  status=200, reason=OK 
- headers={'Date': 'Wed, 09 Apr 2025 04:14:17 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '2', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1744172057&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=6W4wcpM%2BY6q48ltyCDOHmF12zBdDdtSjfd1v%2FlpjvMA%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1744172057&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=6W4wcpM%2BY6q48ltyCDOHmF12zBdDdtSjfd1v%2FlpjvMA%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '997', 'X-Ratelimit-Reset': '1744172098', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Expires': '-1', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"', 'Via': '1.1 vegur', 'cf-cache-status': 'DYNAMIC', 'Server': 'cloudflare', 'CF-RAY': '92d72d3f9f37eeee-EWR', 'alt-svc': 'h3=":443"; ma=86400', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=250519&amp;min_rtt=249951&amp;rtt_var=30289&amp;sent=11&amp;recv=13&amp;lost=0&amp;retrans=0&amp;sent_bytes=6166&amp;recv_bytes=1488&amp;delivery_rate=17429&amp;cwnd=37&amp;unsent_bytes=0&amp;cid=c5aef9b9d3d4a269&amp;ts=981&amp;x=0"'} 
+ headers={'Date': 'Wed, 09 Apr 2025 06:21:02 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'cloudflare', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1744179662&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=%2FiER4E2JVIzQaE883fCtRezFP4pYTjmJ35D1emzGXkg%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1744179662&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=%2FiER4E2JVIzQaE883fCtRezFP4pYTjmJ35D1emzGXkg%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '997', 'X-Ratelimit-Reset': '1744179718', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Expires': '-1', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"', 'Via': '1.1 vegur', 'Cf-Cache-Status': 'DYNAMIC', 'Content-Encoding': 'gzip', 'CF-RAY': '92d7e6e719843a4c-BOM', 'alt-svc': 'h3=":443"; ma=86400'} 
  body={} 
  </msg>
-<msg time="2025-04-09T09:44:16.790380" level="INFO">C:\Users\sraks\AppData\Roaming\Python\Python311\site-packages\urllib3\connectionpool.py:1100: InsecureRequestWarning: Unverified HTTPS request is being made to host 'jsonplaceholder.typicode.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg time="2025-04-09T11:51:01.350014" level="INFO">C:\Users\sraks\AppData\Roaming\Python\Python311\site-packages\urllib3\connectionpool.py:1100: InsecureRequestWarning: Unverified HTTPS request is being made to host 'jsonplaceholder.typicode.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg time="2025-04-09T09:44:16.790380" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2025-04-09T11:51:01.352026" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>new_session</arg>
 <arg>/posts/${id}</arg>
 <doc>Sends a DELETE request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2025-04-09T09:44:16.517133" elapsed="0.273247"/>
+<status status="PASS" start="2025-04-09T11:51:00.572364" elapsed="0.779662"/>
 </kw>
 <kw name="Set Test Variable" owner="BuiltIn">
-<msg time="2025-04-09T09:44:16.790380" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2025-04-09T11:51:01.352026" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <arg>${response}</arg>
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
-<status status="PASS" start="2025-04-09T09:44:16.790380" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-09T11:51:01.352026" elapsed="0.000000"/>
 </kw>
 <kw name="Validate Status code">
 <kw name="Status Should Be" owner="RequestsLibrary">
 <arg>${expected_code}</arg>
 <arg>${response}</arg>
 <doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" start="2025-04-09T09:44:16.790380" elapsed="0.015904"/>
+<status status="PASS" start="2025-04-09T11:51:01.354039" elapsed="0.000000"/>
 </kw>
 <arg>200</arg>
-<status status="PASS" start="2025-04-09T09:44:16.790380" elapsed="0.015904"/>
+<status status="PASS" start="2025-04-09T11:51:01.352026" elapsed="0.002013"/>
 </kw>
 <arg>1</arg>
-<status status="PASS" start="2025-04-09T09:44:16.517133" elapsed="0.289151"/>
+<status status="PASS" start="2025-04-09T11:51:00.572364" elapsed="0.781675"/>
 </kw>
-<status status="PASS" start="2025-04-09T09:44:15.071330" elapsed="1.734954"/>
+<status status="PASS" start="2025-04-09T11:50:56.787897" elapsed="4.566142"/>
 </test>
-<status status="PASS" start="2025-04-09T09:44:14.877704" elapsed="1.928580"/>
+<status status="PASS" start="2025-04-09T11:50:56.586369" elapsed="4.769426"/>
 </suite>
 <statistics>
 <total>
@@ -272,7 +272,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="Post Create Test" id="s1" pass="1" fail="0" skip="0">Post Create Test</stat>
+<stat name="Api Testing" id="s1" pass="1" fail="0" skip="0">Api Testing</stat>
 </suite>
 </statistics>
 <errors>
