@@ -1,5 +1,7 @@
 *** Settings ***
 Library     OperatingSystem
+Library    BuiltIn
+Library    Collections
 
 *** Variables ***
 ${folder_name}        new_folder
@@ -63,3 +65,10 @@ Test file automation
     Rename file    file3.txt    final.txt
 
     #Delete folder
+
+
+        
+
+    
+    
+    
