@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.11.4 on win32)" generated="2025-04-09T11:32:11.377419" rpa="false" schemaversion="5">
+<suite id="s1" name="File Automation" source="C:\python-automation-practice\Week-02\File Automation\file_automation.robot">
+<test id="s1-t1" name="Test file automation" line="47">
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2025-04-09T11:32:11.401201" level="INFO" html="true">Created directory '&lt;a href="file://C:\python-automation-practice\Week-02\File Automation\Output"&gt;C:\python-automation-practice\Week-02\File Automation\Output&lt;/a&gt;'.</msg>
+<arg>Output</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2025-04-09T11:32:11.401201" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-04-09T11:32:11.401201" elapsed="0.000000"/>
+</test>
+<status status="PASS" start="2025-04-09T11:32:11.377419" elapsed="0.023782"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="File Automation" id="s1" pass="1" fail="0" skip="0">File Automation</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
