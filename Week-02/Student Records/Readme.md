@@ -46,11 +46,11 @@ This tool automatically creates individual folders for students, verifies requir
 ## 📊 Sample Output
 
 **pending_submissions.csv**
-```csv
-USN
-4JK21CS01
-4JK21CS03
-4JK21CS04
+  csv
+  USN
+  4JK21CS01
+  4JK21CS03
+  4JK21CS04
 
 ## ▶️ Running the Project
 Make sure you have Robot Framework installed.
@@ -68,7 +68,3 @@ This project is intended for educational and automation learning purposes only.
 
 
 ##  🧪 Built with ❤️ using Robot Framework
-
-
-
-
