@@ -1,14 +1,14 @@
-##  🧠 1. What is Ping?
+##  1. What is Ping?
 Ping is a simple network tool used to test if a device is reachable across a network (LAN or Internet).
 It works by sending a small network message called an ICMP Echo Request to a target (like google.com or another device).
 If the target is online and reachable, it responds with an ICMP Echo Reply.
 
-##  ✅ Example:
+##  Example:
 ping google.com
 You’ll see something like:  Reply from 142.250.205.46: bytes=32 time=23ms TTL=58
 
 
-## 🧪 2. What is an ICMP Echo Request/Reply?
+## 2. What is an ICMP Echo Request/Reply?
 ICMP = Internet Control Message Protocol (used by ping)
 Ping sends Echo Request packets
 The target replies with Echo Reply
@@ -18,7 +18,7 @@ This tells you:
     The IP address of the target
     Packet loss or delay (if any)
 
-## 🔧 3. Use Ping to Test Network Connectivity
+## 3. Use Ping to Test Network Connectivity
 ➤ Example 1: Ping a website
 
 ping google.com
